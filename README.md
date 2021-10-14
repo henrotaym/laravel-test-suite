@@ -19,4 +19,4 @@ Your TestCase should use this trait :
 	* @param  string $element Element to mock
 	* @return  MockInterface
 	*/
-	protected  function  mock(string  $element,  bool  $is_partial  = false):  MockInterface
+	protected  function  mockThis(string  $element,  bool  $is_partial  = false):  MockInterface
