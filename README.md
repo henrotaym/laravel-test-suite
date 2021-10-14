@@ -1,2 +1,22 @@
-# laravel-test-suite
-Adding recurrent functionalities to laravel test suite
+# Laravel test suite
+
+## Installation
+
+    composer require henrotaym/laravel-test-suite
+
+## Configuration
+
+Your TestCase should use this trait :
+
+    Henrotaym\LaravelTestSuite\TestSuite
+
+## Functionalities
+### Mocking
+
+    /**
+	* Mocking given element.
+	* 
+	* @param  string $element Element to mock
+	* @return  MockInterface
+	*/
+	protected  function  mock(string  $element,  bool  $is_partial  = false):  MockInterface

@@ -7,19 +7,20 @@ use Mockery\MockInterface;
 trait TestSuite {
 
     /**
-     * Mocking given class.
+     * Mocking given element.
      * 
+     * @param string $element Element to mock
      * @return MockInterface
      */
 
-    protected function mock(string $class, bool $is_partial = false): MockInterface
+    protected function mock(string $element, bool $is_partial = false): MockInterface
     {
-        $mock = Mockery::mock($class);
+        $mock = Mockery::mock($element);
         if ($is_partial):
             $mock->makePartial();
         endif;
         
-        $this->app->singleton($class, function($app) use ($mock) {
+        $this->app->singleton($element, function($app) use ($mock) {
             return $mock;
         });
 
