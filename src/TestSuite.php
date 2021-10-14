@@ -13,7 +13,7 @@ trait TestSuite {
      * @return MockInterface
      */
 
-    protected function mock(string $element, bool $is_partial = false): MockInterface
+    protected function mockThis(string $element, bool $is_partial = false): MockInterface
     {
         $mock = Mockery::mock($element);
         if ($is_partial):
