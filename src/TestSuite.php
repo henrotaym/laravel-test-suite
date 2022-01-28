@@ -3,9 +3,10 @@ namespace Henrotaym\LaravelTestSuite;
 
 use Mockery;
 use Mockery\MockInterface;
+use Illuminate\Support\Carbon;
 
-trait TestSuite {
-
+trait TestSuite
+{
     /**
      * Mocking given element.
      * 
@@ -13,9 +14,11 @@ trait TestSuite {
      * @return MockInterface
      */
 
-    protected function mockThis(string $element, bool $is_partial = false): MockInterface
+    public function mockThis(string $element, bool $is_partial = false): MockInterface
     {
+        /** @var MockInterface */
         $mock = Mockery::mock($element);
+
         if ($is_partial):
             $mock->makePartial();
         endif;
@@ -73,5 +76,18 @@ trait TestSuite {
         $method->setAccessible(true);
 
         return $method->invokeArgs($instance, $parameters);
+    }
+
+    /**
+     * Mocking Carbon now helper.
+     * 
+     * @param Carbon $now Expected time returned when calling now().
+     * @return static now() faked value.
+     */
+    public function mockCarbonNow(Carbon $now)
+    {
+        Carbon::setTestNow($now);
+
+        return $this;
     }
 }

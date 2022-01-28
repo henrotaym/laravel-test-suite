@@ -52,3 +52,12 @@ Your TestCase should use this trait :
      * @return mixed Method return value.
      */
     protected function callPrivateMethod(string $method, $instance, ...$parameters);
+
+### Mocking Carbon now helper
+    /**
+     * Mocking Carbon now helper.
+     * 
+     * @param Carbon $now Expected time returned when calling now().
+     * @return static
+     */
+    public function mockCarbonNow(Carbon $now)
