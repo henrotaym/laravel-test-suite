@@ -19,6 +19,8 @@ trait TestSuite
         /** @var MockInterface */
         $mock = Mockery::mock($element);
 
+        $mock->shouldAllowMockingProtectedMethods();
+
         if ($is_partial):
             $mock->makePartial();
         endif;
