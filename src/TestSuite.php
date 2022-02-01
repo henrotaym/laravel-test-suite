@@ -14,10 +14,12 @@ trait TestSuite
      * @return MockInterface
      */
 
-    public function mockThis(string $element, bool $is_partial = false): MockInterface
+    public function mockThis(string $element, bool $is_partial = false, array $deps = null): MockInterface
     {
         /** @var MockInterface */
-        $mock = Mockery::mock($element);
+        $mock = $deps
+            ? Mockery::mock($element, $deps)
+            : Mockery::mock($element);
 
         $mock->shouldAllowMockingProtectedMethods();
 
