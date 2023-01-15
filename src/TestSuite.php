@@ -2,8 +2,8 @@
 namespace Henrotaym\LaravelTestSuite;
 
 use Mockery;
+use Carbon\Carbon;
 use Mockery\MockInterface;
-use Illuminate\Support\Carbon;
 
 trait TestSuite
 {
