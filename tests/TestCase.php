@@ -8,7 +8,7 @@ class TestCase extends BaseTestCase
 {
     use TestSuite;
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [];
     }

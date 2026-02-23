@@ -1,14 +1,12 @@
 <?php
 namespace Henrotaym\LaravelTestSuite\Tests\Unit;
 
-use Henrotaym\LaravelTestSuite\Testastos;
+use PHPUnit\Framework\Attributes\Test;
 use Henrotaym\LaravelTestSuite\Tests\TestCase;
 
 class InstallationProcessTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function mocking_now_workin_as_expected()
     {
         $faked_now = now()->addDays(10);

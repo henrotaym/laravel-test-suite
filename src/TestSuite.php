@@ -14,7 +14,7 @@ trait TestSuite
      * @return MockInterface
      */
 
-    public function mockThis(string $element, bool $is_partial = false, array $deps = null): MockInterface
+    public function mockThis(string $element, bool $is_partial = false, ?array $deps = null): MockInterface
     {
         /** @var MockInterface */
         $mock = $deps
@@ -88,7 +88,7 @@ trait TestSuite
      * @param Carbon $now Expected time returned when calling now().
      * @return static now() faked value.
      */
-    public function mockCarbonNow(Carbon $now)
+    public function mockCarbonNow(Carbon $now): static
     {
         Carbon::setTestNow($now);
 
