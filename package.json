@@ -1,12 +1,17 @@
 {
-  "name": "laravel-test-suite",
-  "version": "3.0.1",
-  "description": "Usefull laravel test enhancements.",
-  "main": "index.js",
-  "repository": "git@github.com:henrotaym/laravel-test-suite.git",
-  "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "postversion": "git push && git push --tags"
-  }
+    "name": "@henrotaym/laravel-test-suite",
+    "version": "3.0.1",
+    "description": "Usefull laravel test enhancements.",
+    "main": "index.js",
+    "repository": "git@github.com:henrotaym/laravel-test-suite.git",
+    "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "devDependencies": {
+        "@changesets/cli": "^2.29.7"
+    },
+    "scripts": {
+        "release": "changeset publish",
+        "postversion": "git push && git push --tags"
+    }
 }

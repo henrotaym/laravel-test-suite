@@ -7,3 +7,11 @@ services:
     image: "laravel-test-suite-php-local"
     volumes:
       - ./:/opt/apps/app
+  bun:
+    build:
+      context: .
+      target: bun
+      dockerfile: Dockerfile
+    image: "laravel-test-suite-bun-local"
+    volumes:
+      - ./:/opt/apps/app
