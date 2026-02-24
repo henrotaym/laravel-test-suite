@@ -1,6 +1,6 @@
 {
     "name": "@henrotaym/laravel-test-suite",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "Usefull laravel test enhancements.",
     "main": "index.js",
     "repository": "git@github.com:henrotaym/laravel-test-suite.git",
