@@ -1,5 +1,13 @@
 # Laravel test suite
 
+## Compatibility
+
+| Laravel | Package |
+|---|---|
+| 8.x | 1.x |
+| 8.x | 2.x |
+| 12.x | 3.x |
+
 ## Installation
 
     composer require henrotaym/laravel-test-suite
